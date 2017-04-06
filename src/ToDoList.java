@@ -60,4 +60,12 @@ public class ToDoList {
   public void removeTask(int numberOfTask) {
     thingsToDo.remove(numberOfTask - 1);
   }
+
+  public void printTasks() {
+    String thingsToDo = new String();
+    for (int i = 0; i < this.thingsToDo.size(); ++i) {
+      thingsToDo += (i+1) + " - " + this.thingsToDo.get(i) + "\n";
+    }
+    System.out.println(thingsToDo);
+  }
 }
