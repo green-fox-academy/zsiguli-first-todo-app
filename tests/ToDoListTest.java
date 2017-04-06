@@ -33,6 +33,12 @@ public class ToDoListTest {
 
   @Test
   public void testAddTask() throws Exception {
+    List<String> thingsToDo = new ArrayList<>();
+    thingsToDo.add("Buy milk;[ ]");
+    ToDoList toDoList = new ToDoList("Buy milk");
+    thingsToDo.add("Do homework;[ ]");
+    toDoList.addTask("Do homework");
+    assertEquals(toDoList.getList(), thingsToDo);
   }
 
   @Test
