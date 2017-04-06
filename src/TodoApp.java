@@ -7,7 +7,7 @@ import java.util.List;
 
 public class TodoApp {
   public static void main(String[] args) {
-    Path path = Paths.get("assets/test.csv");
+    Path path = Paths.get("assets/store.csv");
     List<String> lines;
     try {
       lines = Files.readAllLines(path);
