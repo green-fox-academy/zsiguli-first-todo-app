@@ -66,6 +66,11 @@ public class ToDoListTest {
 
   @Test
   public void testRemoveTask() throws Exception {
+    List<String> thingsToDo = new ArrayList<>();
+    thingsToDo.add("Buy milk;[ ]");
+    ToDoList toDoList = new ToDoList("Buy milk");
+    toDoList.addTask("Do homework");
+    toDoList.removeTask(2);
+    assertEquals(toDoList.getList(), thingsToDo);
   }
-
 }
