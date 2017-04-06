@@ -9,11 +9,16 @@ public class ToDoList {
     thingsToDo = new ArrayList<>();
   }
 
+  public ToDoList(String thingToDo) {
+    thingsToDo = new ArrayList<>();
+    thingsToDo.add(thingToDo);
+  }
+
   public ToDoList(List<String> thingsToDo) {
     this.thingsToDo = thingsToDo;
   }
 
-  public List<String> getToDoList() {
+  public List<String> getList() {
     return thingsToDo;
   }
 
