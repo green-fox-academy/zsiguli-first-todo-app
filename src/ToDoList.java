@@ -11,7 +11,7 @@ public class ToDoList {
 
   public ToDoList(String thingToDo) {
     thingsToDo = new ArrayList<>();
-    thingsToDo.add(thingToDo);
+    thingsToDo.add(thingToDo + ";[ ]");
   }
 
   public ToDoList(List<String> thingsToDo) {

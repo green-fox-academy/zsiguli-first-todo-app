@@ -17,7 +17,7 @@ public class ToDoListTest {
   @Test
   public void testToDoListConstructor_withOneGivenString() {
     List<String> thingsToDo = new ArrayList<>();
-    thingsToDo.add("Buy milk");
+    thingsToDo.add("Buy milk;[ ]");
     ToDoList toDoList = new ToDoList("Buy milk");
     assertEquals(toDoList.getList(), thingsToDo);
   }
