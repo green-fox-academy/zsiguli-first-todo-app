@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ToDoList {
-  private static final Path STORE_PATH = Paths.get("assets/store.csv");
+  private static final Path STORE_PATH = Paths.get("../../../assets/store.csv");
 
   private List<String> thingsToDo;
 
