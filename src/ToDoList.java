@@ -1,10 +1,20 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class ToDoList {
+
   private List<String> thingsToDo;
+
+  public ToDoList() {
+    thingsToDo = new ArrayList<>();
+  }
 
   public ToDoList(List<String> thingsToDo) {
     this.thingsToDo = thingsToDo;
+  }
+
+  public List<String> getToDoList() {
+    return thingsToDo;
   }
 
   public void addTask(String newTask) {
