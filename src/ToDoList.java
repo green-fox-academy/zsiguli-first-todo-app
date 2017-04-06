@@ -27,7 +27,10 @@ public class ToDoList {
   }
 
   public void checkTask(int numberOfTask) {
-    thingsToDo.get(numberOfTask - 1).replace("[ ]", "[x]");
+    int position = numberOfTask - 1;
+    String checkedTask = thingsToDo.get(numberOfTask - 1).replace("[ ]", "[x]");
+    thingsToDo.set(position, checkedTask);
+
   }
 
   public void removeTask(int numberOfTask) {
