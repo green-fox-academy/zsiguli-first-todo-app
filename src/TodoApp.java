@@ -10,23 +10,22 @@ public class TodoApp {
     } else {
       switch (args[0]) {
         case "-l":
-          System.out.println("these are the things");
+          thingsToDo.printTasks();
           break;
         case "-a":
-          System.out.println("a");
           thingsToDo.addTask(args[1]);
+          thingsToDo.printTasks();
           break;
         case "-r":
-          System.out.println("r");
           thingsToDo.removeTask(Integer.parseInt(args[1]));
+          thingsToDo.printTasks();
           break;
         case "-c":
-          System.out.println("c");
           thingsToDo.checkTask(Integer.parseInt(args[1]));
+          thingsToDo.printTasks();
           break;
       }
     }
-    thingsToDo.printTasks();
     ToDoList.writeListToFile(thingsToDo.getList());
   }
 }

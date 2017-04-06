@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ToDoList {
-  private static final Path STORE_PATH = Paths.get("../../../assets/store.csv");
+  private static final Path STORE_PATH = Paths.get("assets/store.csv");
 
   private List<String> thingsToDo;
 
@@ -54,7 +54,6 @@ public class ToDoList {
     int position = numberOfTask - 1;
     String checkedTask = thingsToDo.get(numberOfTask - 1).replace("[ ]", "[x]");
     thingsToDo.set(position, checkedTask);
-
   }
 
   public void removeTask(int numberOfTask) {
