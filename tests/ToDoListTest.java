@@ -53,6 +53,18 @@ public class ToDoListTest {
   }
 
   @Test
+  public void testCheckTask_onReadyTask() throws Exception {
+    List<String> thingsToDo = new ArrayList<>();
+    thingsToDo.add("Buy milk;[ ]");
+    thingsToDo.add("Do homework;[x]");
+    ToDoList toDoList = new ToDoList("Buy milk");
+    toDoList.addTask("Do homework");
+    toDoList.checkTask(2);
+    toDoList.checkTask(2);
+    assertEquals(toDoList.getList(), thingsToDo);
+  }
+
+  @Test
   public void testRemoveTask() throws Exception {
   }
 
