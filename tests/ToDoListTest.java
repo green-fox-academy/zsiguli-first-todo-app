@@ -17,7 +17,7 @@ public class ToDoListTest {
   @Test
   public void testToDoListConstructor_withOneGivenString() {
     List<String> thingsToDo = new ArrayList<>();
-    thingsToDo.add("Buy milk;[ ]");
+    thingsToDo.add("[ ] Buy milk");
     ToDoList toDoList = new ToDoList("Buy milk");
     assertEquals(toDoList.getList(), thingsToDo);
   }
@@ -34,9 +34,9 @@ public class ToDoListTest {
   @Test
   public void testAddTask() throws Exception {
     List<String> thingsToDo = new ArrayList<>();
-    thingsToDo.add("Buy milk;[ ]");
+    thingsToDo.add("[ ] Buy milk");
     ToDoList toDoList = new ToDoList("Buy milk");
-    thingsToDo.add("Do homework;[ ]");
+    thingsToDo.add("[ ] Do homework");
     toDoList.addTask("Do homework");
     assertEquals(toDoList.getList(), thingsToDo);
   }
@@ -44,8 +44,8 @@ public class ToDoListTest {
   @Test
   public void testCheckTask() throws Exception {
     List<String> thingsToDo = new ArrayList<>();
-    thingsToDo.add("Buy milk;[ ]");
-    thingsToDo.add("Do homework;[x]");
+    thingsToDo.add("[ ] Buy milk");
+    thingsToDo.add("[x] Do homework");
     ToDoList toDoList = new ToDoList("Buy milk");
     toDoList.addTask("Do homework");
     toDoList.checkTask(2);
@@ -55,8 +55,8 @@ public class ToDoListTest {
   @Test
   public void testCheckTask_onReadyTask() throws Exception {
     List<String> thingsToDo = new ArrayList<>();
-    thingsToDo.add("Buy milk;[ ]");
-    thingsToDo.add("Do homework;[x]");
+    thingsToDo.add("[ ] Buy milk");
+    thingsToDo.add("[x] Do homework");
     ToDoList toDoList = new ToDoList("Buy milk");
     toDoList.addTask("Do homework");
     toDoList.checkTask(2);
@@ -67,7 +67,7 @@ public class ToDoListTest {
   @Test
   public void testRemoveTask() throws Exception {
     List<String> thingsToDo = new ArrayList<>();
-    thingsToDo.add("Buy milk;[ ]");
+    thingsToDo.add("[ ] Buy milk");
     ToDoList toDoList = new ToDoList("Buy milk");
     toDoList.addTask("Do homework");
     toDoList.removeTask(2);
