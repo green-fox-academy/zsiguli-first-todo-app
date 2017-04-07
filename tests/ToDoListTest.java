@@ -1,5 +1,9 @@
 import org.junit.Test;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +33,21 @@ public class ToDoListTest {
     thingsToDo.add("Do homework");
     ToDoList toDoList = new ToDoList(thingsToDo);
     assertEquals(toDoList.getList(), thingsToDo);
+  }
+
+  @Test
+  public void testReadFromFile() {
+    ToDoList toDoList = new ToDoList();
+    List<String> thingsToDo = ToDoList.getListFromFile();
+    Path path = Paths.get("assets/store.csv");
+    List<String> listFromFile;
+    try {
+      listFromFile = Files.readAllLines(path);
+    } catch (IOException e) {
+      listFromFile = new ArrayList<>();
+      e.printStackTrace();
+    }
+    assertEquals(thingsToDo, listFromFile);
   }
 
   @Test
